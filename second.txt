@@ -1,0 +1,16 @@
+/*
+
+Approach to Exercise 2:
+
+--> What we use: 
+	- We use a Circular Queue "cqueue", implemented using a linked list.
+	- "insert" and "delete_data" are functions used to insert and delete
+           elements from the circular queue.
+	- A "head" node keeps track of the current start of the circular queue.
+	- The "traverse" function shows the current contents of the circular queue.
+--> Algorithm:
+	- The function "get_winner" contains the algorithm to find the winner for given "m" & "n"(which are taken as input from the user at the start of the program.). At the start, an "m" element circular queue with data items ranging from 1 - m (in order) is created and "head" node's link points to the start of this circular queue.(note that data value of node k is = k (1 <= k <= m))
+	- Starting from the first node(pointed to by "head" node's link), round 1 eliminates the nth node. The results are shown which contain details of: remaining members, deleted member, and the number of the node, where the next round starts.
+	- This continues for (m-1) rounds, with one member deleted every round. The data value of the last node that remains is the winner's position no.
+
+*/
